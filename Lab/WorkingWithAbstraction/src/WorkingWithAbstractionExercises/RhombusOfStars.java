@@ -1,4 +1,4 @@
-package WorkingWithAbstraction;
+package WorkingWithAbstractionExercises;
 
 import java.util.Scanner;
 
