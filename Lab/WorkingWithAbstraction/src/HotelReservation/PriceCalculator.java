@@ -1,5 +1,7 @@
 package HotelReservation;
 
+import java.util.Locale;
+
 public class PriceCalculator {
     //pricePerDay, numberOfDays, season, discountType
     private double pricePerDay;
@@ -10,7 +12,7 @@ public class PriceCalculator {
     public PriceCalculator(double pricePerDay, int numberOfDays, String season, String discount) {
         this.pricePerDay = pricePerDay;
         this.numberOfDays = numberOfDays;
-        this.season = Seasons.valueOf(season);
+        this.season = Seasons.valueOf(season.toUpperCase());
         this.discount = DiscountType.valueOf(discount);
     }
 
