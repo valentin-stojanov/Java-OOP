@@ -1,4 +1,4 @@
-package WirkingWithAbstraction;
+package WorkingWithAbstraction;
 
 public class Main {
 
