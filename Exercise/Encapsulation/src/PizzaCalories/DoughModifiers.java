@@ -1,5 +1,7 @@
 package PizzaCalories;
 
+import java.util.Arrays;
+
 public enum DoughModifiers {
     WHITE (1.5),
     WHOLEGRAIN (1.0),
@@ -11,10 +13,16 @@ public enum DoughModifiers {
 
     DoughModifiers(double modifier){
         this.modifierValue = modifier;
+
     }
 
     public double getModifierValue(){
         return this.modifierValue;
+    }
+
+    public static boolean containsValue(String doughModifier){
+        String name = doughModifier.toUpperCase();
+        return Arrays.stream(DoughModifiers.values()).anyMatch(v -> name.equals(v.name()));
     }
 
 }

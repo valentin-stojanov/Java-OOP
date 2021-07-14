@@ -13,15 +13,15 @@ public class Dough {
     }
 
     private void setFlourType(String flourType){
-        this.flourType = flourType;
+        this.flourType = Validator.validateDoughModifiers(flourType);
     }
 
     private void setBakingTechnique(String bakingTechnique){
-        this.bakingTechnique = bakingTechnique;
+        this.bakingTechnique = Validator.validateDoughModifiers(bakingTechnique);
     }
 
     private void setWeight(double weight){
-        this.weight = weight;
+        this.weight = Validator.validateDoughWeight(weight);
     }
 
     public double calculateCalories(){
