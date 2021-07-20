@@ -29,14 +29,17 @@ public class Main {
 
         for (Animal animal : animals) {
             System.out.println(animal.toString());
-            System.out.println(animal.produceSound());
         }
     }
 
     private static Animal createAnimal(String type, String[] tokens) {
+
         String name = tokens[0];
         int age = Integer.parseInt(tokens[1]);
-        Gender gender = Gender.valueOf(tokens[2].toUpperCase());
+        String gender = "";
+        if (!type.equals("Kitten") && !type.equals("Tomcat")) {
+            gender = tokens[2];
+        }
         Animal animal;
         switch (type) {
             case "Cat":

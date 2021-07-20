@@ -1,7 +1,7 @@
 package animals;
 
 public class Tomcat extends Cat {
-    public static final Gender GENDER = Gender.MALE;
+    public static final String GENDER = Gender.MALE.toString();
 
     public Tomcat(String name, int age) {
         super(name, age, GENDER);
