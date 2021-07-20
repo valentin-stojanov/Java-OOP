@@ -1,4 +1,4 @@
-package NeedForSpeed;
+package needForSpeed;
 
 public class CrossMotorcycle extends Motorcycle {
 

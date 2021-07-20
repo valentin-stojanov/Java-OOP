@@ -1,4 +1,4 @@
-package NeedForSpeed;
+package needForSpeed;
 
 public class Car extends Vehicle {
     public static double DEFAULT_FUEL_CONSUMPTION = 3;

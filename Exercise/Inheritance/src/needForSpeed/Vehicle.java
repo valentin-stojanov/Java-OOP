@@ -1,4 +1,4 @@
-package NeedForSpeed;
+package needForSpeed;
 
 public class Vehicle {
     public final static double DEFAULT_FUEL_CONSUMPTION = 1.25;
