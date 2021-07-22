@@ -1,41 +1,22 @@
 package carShop;
 
-public class Seat implements Car {
-    private String model;
-    private String color;
-    private Integer horsePower;
-    private String countryProducer;
+public class Seat extends CarImpl implements Sellable {
 
-    public Seat(String model, String color, Integer horsePower, String countryProducer){
-        this.model = model;
-        this.color = color;
-        this.horsePower = horsePower;
-        this.countryProducer = countryProducer;
+    private Double price;
+
+    public Seat(String model, String color, Integer horsePower, String countryProducer, Double price){
+        super(model, color, horsePower, countryProducer);
+        this.price = price;
     }
 
     @Override
-    public String getModel() {
-        return model;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public Integer getHorsePower() {
-        return horsePower;
-    }
-
-    @Override
-    public String countryProducer() {
-        return countryProducer;
+    public Double getPrice() {
+        return this.price;
     }
 
     @Override
     public String toString(){
-        return String.format("This is %s produced in %s and have %d tires",
-                this.model, this.countryProducer, Car.TIRES);
+        return String.format("This is %s produced in %s and have %d tires%n%s sells for %f",
+                getModel(), countryProducer(), Car.TIRES, getModel(), getPrice());
     }
 }

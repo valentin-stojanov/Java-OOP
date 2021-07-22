@@ -6,4 +6,5 @@ public interface Car {
     String getColor();
     Integer getHorsePower();
     String countryProducer();
+    String toString();
 }
