@@ -1,6 +1,6 @@
 package sayHello;
 
-public class Chinese extends People implements Person{
+public class Chinese extends People {
 
     public Chinese(String name){
         super(name);

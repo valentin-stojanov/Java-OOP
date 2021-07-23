@@ -22,5 +22,6 @@ public class Main {
     private static void print(Person person) {
         System.out.println(person.sayHello());
     }
+//
 
 }

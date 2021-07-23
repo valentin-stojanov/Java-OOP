@@ -1,6 +1,6 @@
 package sayHello;
 
-public class European extends People implements Person{
+public class European extends People {
 
     public European(String name){
         super(name);
