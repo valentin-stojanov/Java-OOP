@@ -1,10 +1,14 @@
 package sayHello;
 
-public abstract class People implements Person{
+public abstract class BasePerson implements Person{
 
     private String name;
 
-    public People(String name){
+    public BasePerson(String name){
+        this.setName(name);
+    }
+
+    private void setName(String name) {
         this.name = name;
     }
 
