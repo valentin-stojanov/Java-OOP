@@ -14,7 +14,7 @@ public abstract class CarImpl implements Car {
     }
 
     @Override
-    public String getModel() {
+    public String getModell() {
         return model;
     }
 

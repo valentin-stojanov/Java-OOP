@@ -25,6 +25,6 @@ public class Audi extends CarImpl implements Rentable {
     public String toString(){
        return String.format("This is %s produced in %s and have %d tires%n" +
                "Minimum rental period of %d days. Price per day %f",
-               getModel(), countryProducer(), Car.TIRES, getMinRentDay(), getPricePerDay());
+               getModell(), countryProducer(), Car.TIRES, getMinRentDay(), getPricePerDay());
     }
 }
