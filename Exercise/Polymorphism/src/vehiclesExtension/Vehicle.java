@@ -4,8 +4,8 @@ import java.text.DecimalFormat;
 
 public abstract class Vehicle {
 
-    private double fuelQuantity;
-    private double fuelConsumption;
+    protected double fuelQuantity;
+    protected double fuelConsumption;
     private double capacity;
 
     protected Vehicle(double fuelQuantity, double fuelConsumption, double capacity) {

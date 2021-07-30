@@ -11,10 +11,11 @@ public class Bus extends Vehicle {
     }
 
     public void driveEmpty(double kilometers) {
-        if (fuelConsumption * kilometers > fuelQuantity) {
+        double emptyConsumption = super.fuelConsumption - FUEL_CONSUMPTION_AC;
+        if (emptyConsumption * kilometers > fuelQuantity) {
             System.out.printf("%s needs refueling%n", getClass().getSimpleName());
         } else {
-            fuelQuantity -= fuelConsumption * kilometers;
+            fuelQuantity -= emptyConsumption * kilometers;
             System.out.printf("%s travelled %s km%n", getClass().getSimpleName(), new DecimalFormat("#.##").format(kilometers));
         }
     }

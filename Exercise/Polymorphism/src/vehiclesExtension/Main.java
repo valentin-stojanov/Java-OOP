@@ -9,11 +9,11 @@ public class Main {
 
         String[] carInfo = scanner.nextLine().split("\\s+");
         String[] truckInfo = scanner.nextLine().split("\\s+");
-        String[] buskInfo = scanner.nextLine().split("\\s+");
+        String[] busInfo = scanner.nextLine().split("\\s+");
 
         Vehicle car = new Car(Double.parseDouble(carInfo[1]), Double.parseDouble(carInfo[2]), Double.parseDouble(carInfo[3]));
         Vehicle truck = new Truck(Double.parseDouble(truckInfo[1]), Double.parseDouble(truckInfo[2]), Double.parseDouble(carInfo[3]));
-        Bus bus = new Bus(Double.parseDouble(truckInfo[1]), Double.parseDouble(truckInfo[2]), Double.parseDouble(carInfo[3]));
+        Bus bus = new Bus(Double.parseDouble(busInfo[1]), Double.parseDouble(busInfo[2]), Double.parseDouble(busInfo[3]));
 
         int n = Integer.parseInt(scanner.nextLine());
 
