@@ -1,5 +1,7 @@
 package vehiclesExtension;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -11,9 +13,15 @@ public class Main {
         String[] truckInfo = scanner.nextLine().split("\\s+");
         String[] busInfo = scanner.nextLine().split("\\s+");
 
-        Vehicle car = new Car(Double.parseDouble(carInfo[1]), Double.parseDouble(carInfo[2]), Double.parseDouble(carInfo[3]));
-        Vehicle truck = new Truck(Double.parseDouble(truckInfo[1]), Double.parseDouble(truckInfo[2]), Double.parseDouble(carInfo[3]));
+        Map<String, Vehicle> vehicleMap = new LinkedHashMap<>();
+        Car car = new Car(Double.parseDouble(carInfo[1]), Double.parseDouble(carInfo[2]), Double.parseDouble(carInfo[3]));
+        vehicleMap.put("Car", car);
+        Truck truck = new Truck(Double.parseDouble(truckInfo[1]), Double.parseDouble(truckInfo[2]), Double.parseDouble(carInfo[3]));
+        vehicleMap.put("Truck", truck);
         Bus bus = new Bus(Double.parseDouble(busInfo[1]), Double.parseDouble(busInfo[2]), Double.parseDouble(busInfo[3]));
+        vehicleMap.put("Bus", bus);
+
+
 
         int n = Integer.parseInt(scanner.nextLine());
 
@@ -56,9 +64,9 @@ public class Main {
             }
         }
 
-        System.out.println(car.toString());
-        System.out.println(truck.toString());
-        System.out.println(bus.toString());
+        for (Vehicle vehicle : vehicleMap.values()) {
+            System.out.println(vehicle.toString());
+        }
 
 
     }
