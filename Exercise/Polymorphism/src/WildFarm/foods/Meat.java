@@ -1,4 +1,7 @@
 package WildFarm.foods;
 
-public class Meat {
+public class Meat extends Food{
+    public Meat(int quantity) {
+        super(quantity);
+    }
 }
