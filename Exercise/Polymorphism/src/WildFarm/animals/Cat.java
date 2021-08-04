@@ -2,6 +2,8 @@ package WildFarm.animals;
 
 import WildFarm.foods.Food;
 
+import java.text.DecimalFormat;
+
 public class Cat extends Felime {
     private String breed;
 
@@ -10,13 +12,21 @@ public class Cat extends Felime {
         this.breed = breed;
     }
 
+
     @Override
     public void makeSound() {
-
+        System.out.println("Meowwww");
     }
 
     @Override
-    public void eat(Food food) {
-        super.getFoodEaten() += food.getQuantity();
+    public  String toString(){
+        DecimalFormat formatter = new DecimalFormat("#.##");
+        return  String.format("%s[%s, %s, %s, %s, %d]",
+                getClass().getSimpleName(),
+                super.getAnimalName(),
+                this.breed,
+                formatter.format(super.getAnimalWeight()),
+                getLivingRegion(),
+                super.getFoodEaten());
     }
 }

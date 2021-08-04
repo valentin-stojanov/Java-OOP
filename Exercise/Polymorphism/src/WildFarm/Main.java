@@ -5,25 +5,39 @@ import WildFarm.foods.Food;
 import WildFarm.foods.Meat;
 import WildFarm.foods.Vegetable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        List<Animal> animals = new ArrayList<>();
 
-        String foodInfo = scanner.nextLine();
+        String animalInfo = scanner.nextLine();
 
-        while (!foodInfo.equals("End")) {
+        while (!animalInfo.equals("End")) {
+
+            String foodInfo = scanner.nextLine();
+
             Food food = createFood(foodInfo);
-
-            String animalInfo = scanner.nextLine();
             Animal animal = createAnimal(animalInfo);
+            animals.add(animal);
+            animal.makeSound();
 
-            animal.eat(food);
+            try {
+                animal.eat(food);
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+         animalInfo = scanner.nextLine();
 
-
-            foodInfo = scanner.nextLine();
         }
+
+        for (Animal animal : animals) {
+            System.out.println(animal.toString());
+        }
+
     }
 
     private static Food createFood(String foodInfo) {

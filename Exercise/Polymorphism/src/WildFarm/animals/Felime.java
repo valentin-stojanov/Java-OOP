@@ -6,4 +6,6 @@ public abstract class Felime extends Mammal{
         super(animalName, animalType, animalWeight, livingRegion);
     }
 
+
+
 }
