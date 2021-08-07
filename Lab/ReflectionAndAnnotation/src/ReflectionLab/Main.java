@@ -19,9 +19,10 @@ public class Main {
 
         Constructor<Reflection> ctor = clazz.getDeclaredConstructor();
 
-        Reflection reflection = ctor.newInstance();
-
-        System.out.println(reflection.toString());
+//        ctor.setAccessible(true);
+//        Reflection reflection = ctor.newInstance();
+//
+//        System.out.println(reflection.toString());
 
 
     }
