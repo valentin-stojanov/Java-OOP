@@ -2,6 +2,7 @@ package barracksWars.core.factories;
 
 import barracksWars.interfaces.Unit;
 import barracksWars.interfaces.UnitFactory;
+import barracksWars.models.units.*;
 import jdk.jshell.spi.ExecutionControl;
 
 public class UnitFactoryImpl implements UnitFactory {
@@ -11,7 +12,19 @@ public class UnitFactoryImpl implements UnitFactory {
 
 	@Override
 	public Unit createUnit(String unitType) throws ExecutionControl.NotImplementedException {
-		// TODO: implement for problem 3
-		throw new ExecutionControl.NotImplementedException("message");
+		switch (unitType){
+			case "Archer":
+				return new Archer();
+			case "Swordsman":
+				return new Swordsman();
+			case "Pikeman":
+				return new Pikeman();
+			case "Horseman":
+				return new Horseman();
+			case "Gunner":
+				return new Gunner();
+			default:
+				throw new IllegalStateException("Illegal Unit type " + unitType);
+		}
 	}
 }
