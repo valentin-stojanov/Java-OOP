@@ -14,7 +14,7 @@ public class UnitFactoryImpl implements UnitFactory {
             "barracksWars.models.units.";
 
     @Override
-    public Unit createUnit(String unitType) throws ExecutionControl.NotImplementedException {
+    public Unit createUnit(String unitType) {
         try {
             Class<?> clazz = Class.forName(UNITS_PACKAGE_NAME + unitType);
             Constructor<?> constructor = clazz.getDeclaredConstructor();
