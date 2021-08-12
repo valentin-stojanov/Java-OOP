@@ -2,6 +2,8 @@ package rpg_lab;
 
 public class Axe {
 
+    static final int DURABILITY_LOSS = 1;
+
     private int attackPoints;
     private int durabilityPoints;
 
@@ -24,6 +26,6 @@ public class Axe {
         }
 
         target.takeAttack(this.attackPoints);
-        this.durabilityPoints -= 1;
+        this.durabilityPoints -= DURABILITY_LOSS;
     }
 }
