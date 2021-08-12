@@ -7,8 +7,6 @@ import static org.junit.Assert.*;
 
 public class DummyTest {
 
-    private static final int AXE_ATTACK = 10;
-    private static final int AXE_DURABILITY = 10;
     private static final int DUMMY_HEALTH = 100;
     private static final int DUMMY_EXPERIENCE = 100;
     private static final int ATTACK_POINT = 10;
