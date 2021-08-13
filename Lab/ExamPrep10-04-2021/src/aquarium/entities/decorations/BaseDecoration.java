@@ -1,6 +1,6 @@
 package aquarium.entities.decorations;
 
-public abstract class BaseDecoration implements Decoration {
+public abstract class BaseDecoration implements Decoration{
     private int comfort;
     private double price;
 

@@ -1,17 +1,13 @@
 package aquarium.entities.fish;
 
-
 public abstract class BaseFish implements Fish{
-
     private String name;
     private String species;
     private int size;
     private double price;
 
     protected BaseFish(String name, String species, double price) {
-        this.name = name;
-        this.species = species;
-        this.price = price;
+
     }
 
     @Override

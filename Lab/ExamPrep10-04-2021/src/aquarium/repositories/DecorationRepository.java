@@ -2,11 +2,15 @@ package aquarium.repositories;
 
 import aquarium.entities.decorations.Decoration;
 
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
-public abstract class DecorationRepository implements Repository {
+public class DecorationRepository implements Repository {
+    private Collection<Decoration> decorations;
 
-    private List<Decoration> decorations;
+    public DecorationRepository() {
+    }
 
     @Override
     public void add(Decoration decoration) {

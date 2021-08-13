@@ -3,15 +3,16 @@ package aquarium.core;
 import aquarium.entities.aquariums.Aquarium;
 import aquarium.repositories.DecorationRepository;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class ControllerImpl implements Controller{
-
     private DecorationRepository decorations;
     private List<Aquarium> aquariums;
 
     public ControllerImpl() {
-
+        this.decorations = new DecorationRepository();
+        this.aquariums = new LinkedList<>();
     }
 
     @Override
