@@ -4,7 +4,7 @@ import restaurant.entities.healthyFoods.interfaces.HealthyFood;
 import restaurant.entities.drinks.interfaces.Beverages;
 
 public interface Table {
-    int getTableNumber();
+     int getTableNumber();
 
     int getSize();
 
